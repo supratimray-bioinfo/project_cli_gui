@@ -1,11 +1,11 @@
 import os
 import psutil
 import platform
-import distro  # To get detailed Linux distribution info
+import distro  
 
-def get_cpu_name():
+def cpu_name():
     try:
-        # Read /proc/cpuinfo on Linux systems to get the CPU name
+        
         with open('/proc/cpuinfo', 'r') as f:
             for line in f:
                 if "model name" in line:
@@ -13,7 +13,7 @@ def get_cpu_name():
     except FileNotFoundError:
         return "CPU info not available"
 
-def get_system_details():
+def system_details():
     if platform.system() == "Linux":
         os_info = f"{distro.name()} {distro.version()} ({distro.codename()})"
     else:
@@ -21,7 +21,7 @@ def get_system_details():
     
     system_info = {
         "Operating System": os_info,
-        "Processor": get_cpu_name(),
+        "Processor": _cpu_name(),
         "CPU Cores": os.cpu_count(),
         "RAM (GB)": {
             "Total": round(psutil.virtual_memory().total / (1024 ** 3), 2),
@@ -47,6 +47,6 @@ def display_system_details(details):
             print(f"{key}: {value}")
 
 if __name__ == "__main__":
-    details = get_system_details()
+    details = _system_details()
     display_system_details(details)
 
