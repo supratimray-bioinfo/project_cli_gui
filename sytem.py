@@ -47,6 +47,6 @@ def display_system_details(details):
             print(f"{key}: {value}")
 
 if __name__ == "__main__":
-    details = _system_details()
+    details = system_details()
     display_system_details(details)
 
