@@ -1,0 +1,26 @@
+{
+  "FastQC": {
+    "conda": "conda install -c bioconda fastqc",
+    "script": "scripts/install_fastqc.sh",
+    "docs": "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+    "youtube": "https://youtu.be/Vb4hD7t8-fc"
+  },
+  "QIIME2": {
+    "conda": "conda install -c qiime2 qiime2",
+    "script": "scripts/install_qiime2.sh",
+    "docs": "https://docs.qiime2.org/",
+    "youtube": "https://youtu.be/6R5qvTwM-EA"
+  },
+  "VCFtools": {
+    "conda": "conda install -c bioconda vcftools",
+    "script": "scripts/install_vcftools.sh",
+    "docs": "https://vcftools.github.io/index.html",
+    "youtube": "https://youtu.be/N9n-EspAfBg"
+  },
+  "BCFtools": {
+    "conda": "conda install -c bioconda bcftools",
+    "script": "scripts/install_bcftools.sh",
+    "docs": "http://www.htslib.org/doc/bcftools.html",
+    "youtube": "https://youtu.be/MzM3GugNUoU"
+  }
+}
